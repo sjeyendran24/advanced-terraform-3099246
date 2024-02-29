@@ -13,7 +13,7 @@ data "google_compute_network" "default" {
 ## SUBNET
 resource "google_compute_subnetwork" "subnet-1" {
   name                     = "subnet1"
-  ip_cidr_range            = "10.127.0.0/20"
+  ip_cidr_range            = "10.16.0.0/18"
   network                  = data.google_compute_network.default.self_link
   region                   = "us-central1"
   private_ip_google_access = true
